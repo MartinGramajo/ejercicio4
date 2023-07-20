@@ -38,7 +38,7 @@ const FormularioTarea = () => {
             </Button>
           </InputGroup>
         </Form>
-        <ListaTareas />
+        <ListaTareas listaDeTareas={listaTareas} />
       </Container>
     </>
   );
