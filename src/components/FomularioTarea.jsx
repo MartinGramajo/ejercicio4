@@ -18,6 +18,13 @@ const FormularioTarea = () => {
     setTarea(e.target.value);
   };
 
+  const borrarTarea = (tareaBorrar) => {
+    let listaTareasFiltrada = listaTareas.filter(
+      (itemTarea) => itemTarea !== tareaBorrar
+    );
+    setListaTareas(listaTareasFiltrada);
+  };
+
   return (
     <>
       <Container>
@@ -38,7 +45,7 @@ const FormularioTarea = () => {
             </Button>
           </InputGroup>
         </Form>
-        <ListaTareas listaDeTareas={listaTareas} />
+        <ListaTareas listaDeTareas={listaTareas} borrarTarea={borrarTarea} />
       </Container>
     </>
   );
